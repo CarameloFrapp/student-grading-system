@@ -47,12 +47,6 @@ if (isset($_POST['update'])) {
         $final_exam < 0 || $final_exam > 50
     ) {
         $error = "Invalid marks. Test 1: 0-20, Test 2: 0-30, Final Exam: 0-50.";
-    } elseif (
-        !is_numeric($_POST['test1']) ||
-        !is_numeric($_POST['test2']) ||
-        !is_numeric($_POST['final_exam'])
-    ) {
-        $error = "Please enter valid marks.";
     } else {
 
         $final_marks = $test1 + $test2 + $final_exam;
